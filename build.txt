@@ -1,0 +1,6 @@
+displayName = Yoyo Stats
+author = MooMoo
+version = 0.1
+showCode = true
+hideResources = false
+includeSource = true

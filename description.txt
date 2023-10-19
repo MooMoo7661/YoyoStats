@@ -1,0 +1,5 @@
+This mod allows you to see the stats of your yoyos, so you can choose between different modded yoyos without having to do a lot of testing or research to find their stats.
+It does not show the total range including yoyo strings, and only shows the absolute *base* stats of the yoyo.
+You can customize what stats show up, if you don't care about certain ones.
+
+Border and yoyo sprite for the icon made by Otterly
