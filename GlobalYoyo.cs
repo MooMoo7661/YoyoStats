@@ -15,7 +15,10 @@ namespace YoyoStats
             {
                 var instance = ModContent.GetInstance<YoyoStatsConfig>();
 
-                float yoyoSpeed = ProjectileID.Sets.YoyosTopSpeed[item.shoot];
+                Projectile proj = ContentSamples.ProjectilesByType[item.shoot];
+                int updates = proj.MaxUpdates;
+                if (proj.extraUpdates == 0) { updates = 1; }
+                float yoyoSpeed = ProjectileID.Sets.YoyosTopSpeed[item.shoot] * updates;
                 float yoyoRange = ProjectileID.Sets.YoyosMaximumRange[item.shoot] / 16f;
                 float yoyoLifetime = ProjectileID.Sets.YoyosLifeTimeMultiplier[item.shoot];
                 int maxHits = ContentSamples.ProjectilesByType[item.shoot].penetrate;
@@ -56,7 +59,7 @@ namespace YoyoStats
                     tooltips.Insert(index, new TooltipLine(Mod, "YoyoMaxHitsInfo", maxHitsTooltip)); //
 
                 if (instance.YoyoSpeed)
-                tooltips.Insert(index, new TooltipLine(Mod, "YoyoSpeedInfo", coloredTooltip + " yoyo speed]")); //
+                tooltips.Insert(index, new TooltipLine(Mod, "YoyoSpeedInfo", coloredTooltip + " base yoyo speed]")); //
 
                 coloredTooltip = colorizeTooltip + yoyoRange.ToString();
                 if (instance.YoyoRange)
