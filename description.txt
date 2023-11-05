@@ -2,4 +2,7 @@ This mod allows you to see the stats of your yoyos, so you can choose between di
 It does not show the total range including yoyo strings, and only shows the absolute *base* stats of the yoyo.
 You can customize what stats show up, if you don't care about certain ones.
 
+DISCLAIMER! - Some stats might not show correctly for yoyos from other mods.
+This is due to them setting speed changes in the AI, which this mod only detects the original set speed.
+
 Border and yoyo sprite for the icon made by Otterly
