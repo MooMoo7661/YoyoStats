@@ -1,0 +1,35 @@
+Configs: {
+	YoyoStatsConfig: {
+		// DisplayName: Yoyo Stats Config
+
+		YoyoSpeed: {
+			// Label: Yoyo Speed
+			// Tooltip: ""
+		}
+
+		YoyoRange: {
+			// Label: Yoyo Range
+			// Tooltip: ""
+		}
+
+		YoyoLifetime: {
+			// Label: Yoyo Lifetime
+			// Tooltip: ""
+		}
+
+		YoyoHits: {
+			// Label: Yoyo Hits
+			// Tooltip: ""
+		}
+	}
+}
+
+LocalizedText: {
+	// SecondsLifetime: seconds lifetime
+	// MaximumHits: maximum hits
+	// InfiniteLifetime: Infinite lifetime
+	// NoMaximumHits: No maximum hits
+	// BaseYoyoSpeed: base yoyo speed
+	// TilesBaseRange: tiles base range
+	// YoyoStats: =Yoyo Stats=
+}

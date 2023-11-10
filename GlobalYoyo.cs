@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace YoyoStats
@@ -40,11 +41,11 @@ namespace YoyoStats
                 string colorizeTooltip = "[c/99EEA2:";
                 string coloredTooltip = colorizeTooltip + yoyoSpeed.ToString();
 
-                string lifetimeTooltip = colorizeTooltip + yoyoLifetime.ToString() + " seconds lifetime]";
-                string maxHitsTooltip = colorizeTooltip + maxHits.ToString() + " maximum hits]";
+                string lifetimeTooltip = colorizeTooltip + yoyoLifetime.ToString() + Language.GetTextValue("LocalizedText.SecondsLifetime") + "]";
+                string maxHitsTooltip = colorizeTooltip + maxHits.ToString() + Language.GetTextValue("LocalizedText.MaximumHits") + "]";
                 if (yoyoLifetime < 0)
                 {
-                    lifetimeTooltip = colorizeTooltip + "Infinite lifetime]";
+                    lifetimeTooltip = colorizeTooltip + Language.GetTextValue("LocalizedText.InfiniteLifetime") + "]";
                 }
 
                 if (instance.YoyoLifetime)
@@ -52,22 +53,22 @@ namespace YoyoStats
 
                 if (maxHits < 0)
                 {
-                    maxHitsTooltip = colorizeTooltip + "No maximum hits]";
+                    maxHitsTooltip = colorizeTooltip + Language.GetTextValue("LocalizedText.NoMaximumHits") + "]";
                 }
 
                 if (instance.YoyoHits)
                     tooltips.Insert(index, new TooltipLine(Mod, "YoyoMaxHitsInfo", maxHitsTooltip)); //
 
                 if (instance.YoyoSpeed)
-                tooltips.Insert(index, new TooltipLine(Mod, "YoyoSpeedInfo", coloredTooltip + " base yoyo speed]")); //
+                    tooltips.Insert(index, new TooltipLine(Mod, "YoyoSpeedInfo", coloredTooltip + Language.GetTextValue("LocalizedText.BaseYoyoSpeed"))); //
 
                 coloredTooltip = colorizeTooltip + yoyoRange.ToString();
                 if (instance.YoyoRange)
-                tooltips.Insert(index, new TooltipLine(Mod, "YoyoRangeInfo", coloredTooltip + " tiles base range]")); //
+                tooltips.Insert(index, new TooltipLine(Mod, "YoyoRangeInfo", coloredTooltip + Language.GetTextValue("LocalizedText.TilesBaseRange"))); //
 
                 if (!nothingEnabled)
                 {
-                    tooltips.Insert(index, new TooltipLine(Mod, "YoyoStatIdentifier", "[c/99EEA2:=Yoyo Stats=]"));
+                    tooltips.Insert(index, new TooltipLine(Mod, "YoyoStatIdentifier", "[c/99EEA2:" + Language.GetTextValue("LocalizedText.YoyoStats" + "]")));
                 }
 
             }
